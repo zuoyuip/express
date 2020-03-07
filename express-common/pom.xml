@@ -8,7 +8,6 @@
     <dependency>
       <artifactId>lombok</artifactId>
       <groupId>org.projectlombok</groupId>
-      <optional>true</optional>
     </dependency>
     <dependency>
       <artifactId>h2</artifactId>
@@ -21,6 +20,22 @@
       <scope>runtime</scope>
     </dependency>
 
+    <!-- restful APIs swagger2 -->
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger2</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-swagger-ui</artifactId>
+    </dependency>
+    <dependency>
+      <artifactId>HikariCP</artifactId>
+      <groupId>com.zaxxer</groupId>
+    </dependency>
+
+
+
     <dependency>
       <artifactId>spring-boot-starter-test</artifactId>
       <exclusions>
@@ -30,7 +45,10 @@
         </exclusion>
       </exclusions>
       <groupId>org.springframework.boot</groupId>
-      <!--      <scope>test</scope>-->
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>org.springframework.boot</groupId>
     </dependency>
   </dependencies>
 

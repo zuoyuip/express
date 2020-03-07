@@ -8,6 +8,7 @@ abstract class ExpressCommonApplicationTests {
 
   @Test
   void contextLoads() {
+    System.out.println("test" );
   }
 
 }

@@ -28,9 +28,13 @@
   <groupId>org.fast</groupId>
   <modelVersion>4.0.0</modelVersion>
   <modules>
+    <!--    公共模块-->
     <module>express-common</module>
+    <!--    用户模块-->
     <module>express-user</module>
+    <!--    订单模块-->
     <module>express-order</module>
+    <!--    整合模块-->
     <module>express-server</module>
   </modules>
   <name>express</name>

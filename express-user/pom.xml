@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns="http://maven.apache.org/POM/4.0.0"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <artifactId>express-user</artifactId>
 
-    <parent>
-        <groupId>org.fast</groupId>
-        <artifactId>express</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
-    </parent>
+  <dependencies>
+    <dependency>
+      <artifactId>express-common</artifactId>
+      <groupId>org.fast</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-data-jpa</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-boot-starter-amqp</artifactId>
+      <groupId>org.springframework.boot</groupId>
+    </dependency>
+    <dependency>
+      <artifactId>spring-rabbit-test</artifactId>
+      <groupId>org.springframework.amqp</groupId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
 
-    <artifactId>express-user</artifactId>
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <artifactId>express</artifactId>
+    <groupId>org.fast</groupId>
     <version>0.0.1-SNAPSHOT</version>
+  </parent>
 
-    <dependencies>
-        <dependency>
-            <artifactId>express-common</artifactId>
-            <groupId>org.fast</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <groupId>org.springframework.boot</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>spring-boot-starter-amqp</artifactId>
-            <groupId>org.springframework.boot</groupId>
-        </dependency>
-        <dependency>
-            <artifactId>spring-rabbit-test</artifactId>
-            <groupId>org.springframework.amqp</groupId>
-            <scope>test</scope>
-        </dependency>
-    </dependencies>
-    
+  <version>0.0.1-SNAPSHOT</version>
+
 </project>

@@ -10,17 +10,8 @@
       <groupId>org.fast</groupId>
     </dependency>
     <dependency>
-      <artifactId>spring-boot-starter-amqp</artifactId>
-      <groupId>org.springframework.boot</groupId>
-    </dependency>
-    <dependency>
       <groupId>org.springframework.boot</groupId>
       <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-    <dependency>
-      <artifactId>spring-rabbit-test</artifactId>
-      <groupId>org.springframework.amqp</groupId>
-      <scope>test</scope>
     </dependency>
   </dependencies>
 

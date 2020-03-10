@@ -1,6 +1,6 @@
 package org.fast.express.order.common.exception;
 
-import org.fast.express.order.common.enums.BaseStatusEnum;
+import org.fast.express.order.common.status.BaseStatus;
 import org.springframework.http.HttpStatus;
 
 /**
@@ -17,9 +17,9 @@ public abstract class BaseException extends RuntimeException {
    */
   private int code;
 
-  public BaseException(BaseStatusEnum statusEnum) {
-    super(statusEnum.getMessage());
-    this.code = statusEnum.getCode();
+  public BaseException(BaseStatus.Status status) {
+    super(status.getMessage());
+    this.code = status.getCode();
   }
 
   public BaseException(HttpStatus status) {

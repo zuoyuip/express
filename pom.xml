@@ -37,6 +37,20 @@
         <version>${swagger.version}</version>
       </dependency>
 
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-bean-validators</artifactId>
+        <version>${swagger.version}</version>
+      </dependency>
+
+
+      <dependency>
+        <groupId>io.springfox</groupId>
+        <artifactId>springfox-petstore</artifactId>
+        <version>${swagger.version}</version>
+      </dependency>
+
+
       <!--      连接池-->
       <dependency>
         <artifactId>HikariCP</artifactId>

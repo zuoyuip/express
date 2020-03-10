@@ -6,7 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
-import org.fast.express.order.common.enums.BaseStatusEnum;
+import org.fast.express.order.common.status.BaseStatus;
 import org.springframework.util.Assert;
 
 /**
@@ -58,10 +58,10 @@ public class Result<T> {
 
     private T data;
 
-    public Builder<T> resultEnum(BaseStatusEnum resultEnum) {
-      Assert.notNull(resultEnum, String.format("%s is not allowed null", resultEnum.name()));
-      this.code = resultEnum.getCode();
-      this.message = resultEnum.getMessage();
+    public Builder<T> resultStatus(BaseStatus.Status status) {
+      Assert.notNull(status, String.format("%s is not allowed null", status.toString()));
+      this.code = status.getCode();
+      this.message = status.getMessage();
       return this;
     }
 

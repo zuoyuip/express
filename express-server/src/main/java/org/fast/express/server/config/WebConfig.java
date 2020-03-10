@@ -1,7 +1,9 @@
 package org.fast.express.server.config;
 
+import com.fasterxml.classmate.TypeResolver;
 import java.nio.charset.StandardCharsets;
 import java.util.List;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.converter.HttpMessageConverter;
 import org.springframework.http.converter.StringHttpMessageConverter;
 import org.springframework.web.cors.CorsConfiguration;
@@ -32,13 +34,15 @@ public class WebConfig extends WebMvcConfigurationSupport {
     super.addCorsMappings(registry);
   }
 
+  /**
+   * 放行swagger
+   */
   @Override
   protected void addResourceHandlers(ResourceHandlerRegistry registry) {
-    /*放行swagger*/
-//    registry.addResourceHandler("swagger-ui.html")
-//        .addResourceLocations("classpath:/META-INF/resources/");
-//    registry.addResourceHandler("/webjars/**")
-//        .addResourceLocations("classpath:/META-INF/resources/webjars/");
+    registry.addResourceHandler("swagger-ui.html")
+        .addResourceLocations("classpath:/META-INF/resources/");
+    registry.addResourceHandler("/webjars/**")
+        .addResourceLocations("classpath:/META-INF/resources/webjars/");
     super.addResourceHandlers(registry);
   }
 

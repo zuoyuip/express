@@ -13,8 +13,7 @@ import org.springframework.stereotype.Repository;
  * @create 2020-03-07 22:52
  **/
 @Repository
-public interface UserRepository extends JpaRepository<UserDO, Integer>,
-    JpaSpecificationExecutor<UserDO> {
+public interface UserRepository extends JpaRepository<UserDO, Integer>{
 
 
 }

@@ -8,6 +8,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.Collection;
 import java.util.List;
+import javax.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -44,6 +45,7 @@ public class UserDTO implements UserDetails {
    * 安全用户帐号（手机号）
    */
   @JsonProperty("phone")
+  @NotNull(message = "手机号不得为空")
   @ApiModelProperty(name = "phone", value = "安全用户帐号（手机号）")
   private String userPhone;
 
@@ -51,9 +53,9 @@ public class UserDTO implements UserDetails {
    * 安全用户的密码
    */
   @JsonIgnore
+  @NotNull(message = "密码不得为空")
   @ApiModelProperty(name = "password", value = "安全用户的密码")
   private String userPassword;
-
 
 
   /**
@@ -131,5 +133,12 @@ public class UserDTO implements UserDetails {
   @ApiModelProperty(hidden = true)
   public boolean isEnabled() {
     return true;
+  }
+
+  public UserDTO(
+      @NotNull(message = "手机号不得为空") String userPhone,
+      @NotNull(message = "密码不得为空") String userPassword) {
+    this.userPhone = userPhone;
+    this.userPassword = userPassword;
   }
 }

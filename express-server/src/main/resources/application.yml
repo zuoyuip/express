@@ -1,8 +1,16 @@
 spring:
   profiles:
     active: dev
+  redis:
+    password: root
+    port: 6379
+    host: localhost
 swagger:
   config:
     enabled: true
     urlTemplating: true
     forCodeGen: true
+server:
+  port: 8080
+  servlet:
+    context-path: /express

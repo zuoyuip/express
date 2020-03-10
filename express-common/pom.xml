@@ -34,6 +34,21 @@
     </dependency>
 
     <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-bean-validators</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>jakarta.validation</groupId>
+      <artifactId>jakarta.validation-api</artifactId>
+    </dependency>
+
+    <dependency>
+      <groupId>io.springfox</groupId>
+      <artifactId>springfox-petstore</artifactId>
+    </dependency>
+
+    <dependency>
       <artifactId>HikariCP</artifactId>
       <groupId>com.zaxxer</groupId>
     </dependency>

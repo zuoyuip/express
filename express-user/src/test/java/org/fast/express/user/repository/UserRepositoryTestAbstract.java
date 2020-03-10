@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
-import org.fast.express.order.common.enums.BaseStatusEnum;
+import org.fast.express.order.common.status.BaseStatus;
 import org.fast.express.order.common.utils.JsonUtil;
 import org.fast.express.order.common.utils.Result;
 import org.fast.express.user.AbstractExpressUserModuleTests;
@@ -35,7 +35,7 @@ class UserRepositoryTestAbstract extends AbstractExpressUserModuleTests {
   @Test
   void result() {
     List<UserDO> userDOList = userRepository.findAll();
-    Result<Object> result = Result.builder().resultEnum(BaseStatusEnum.SUCCESS).data(userDOList)
+    Result<Object> result = Result.builder().resultStatus(BaseStatus.SUCCESS).data(userDOList)
         .build();
     String jsonString = JsonUtil.objectToJsonString(result);
     log.info(jsonString);

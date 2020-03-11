@@ -8,7 +8,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.cache.annotation.EnableCaching;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
@@ -20,8 +19,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableScheduling
 @EnableTransactionManagement
 @EnableConfigurationProperties(value = {SwaggerConfig.class})
-@SpringBootApplication(scanBasePackageClasses = OrderModuleContext.class)
-@Import(value = {WebConfig.class, RedisCacheConfig.class})
+@SpringBootApplication
+@Import(value = {WebConfig.class, RedisCacheConfig.class, OrderModuleContext.class})
 public class ExpressApplication {
 
 

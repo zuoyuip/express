@@ -7,7 +7,7 @@ spring:
 
     # H2 Database 配置
     driver-class-name: org.h2.Driver
-    url: jdbc:h2:file:./src/main/resources/db/express
+    url: jdbc:h2:file:./express-server/src/main/resources/db/express
     username: root
     password: root
   h2:
@@ -34,8 +34,3 @@ spring:
       org.fast.express.user.repository: INFO
       org.fast.express.server.repository: INFO
       org.fast.express.order.repository: INFO
-
-  security:
-    user:
-      name: root
-      password: root

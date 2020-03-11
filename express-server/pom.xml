@@ -21,10 +21,10 @@
     </dependency>
 
     <dependency>
-      <artifactId>spring-boot-starter-web</artifactId>
+      <artifactId>spring-boot-configuration-processor</artifactId>
       <groupId>org.springframework.boot</groupId>
+      <optional>true</optional>
     </dependency>
-
 
   </dependencies>
   <modelVersion>4.0.0</modelVersion>

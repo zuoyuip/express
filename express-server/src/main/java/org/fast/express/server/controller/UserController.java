@@ -40,7 +40,7 @@ public class UserController {
       @ApiImplicitParam(name = "password", value = "密码", required = true, dataTypeClass = String.class)
   })
   public ResponseEntity<Result> register(String phone, String password) {
-    iUserService.register(new UserDTO());
+    iUserService.register(new UserDTO(phone, password));
     return ResponseEntity.ok(Result.builder()
         .resultStatus(UserStatus.REGISTER_SUCCESS).build());
   }

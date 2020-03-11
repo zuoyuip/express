@@ -93,7 +93,7 @@ public class SwaggerConfig {
         .apiInfo(apiInfo())
         .select()
         .apis(RequestHandlerSelectors
-            .basePackage("org.fast.express"))
+            .any())
         .paths(PathSelectors.any())
         .build()
         .pathMapping("/")

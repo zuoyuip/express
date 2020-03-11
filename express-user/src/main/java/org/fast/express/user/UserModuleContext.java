@@ -1,6 +1,8 @@
 package org.fast.express.user;
 
+import org.fast.express.user.security.SecurityConfig;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.Profile;
 
 /**
@@ -12,6 +14,7 @@ import org.springframework.context.annotation.Profile;
  **/
 @Profile("dev")
 @SpringBootApplication
+@Import(value = {SecurityConfig.class})
 public class UserModuleContext {
 
 }

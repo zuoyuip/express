@@ -60,5 +60,66 @@ public class UserDO extends BaseEntity {
   private Boolean userIsAccountNonLocked;
 
 
+  /**
+   * 真实姓名
+   */
+  @Column(name = "USER_REAL_NAME", columnDefinition = "varchar(50)  comment '真实姓名'")
+  private String userRealName;
+
+  /**
+   * 性别
+   */
+  @Column(name = "USER_GENDER", columnDefinition = "varchar(5)  comment '性别'")
+  private String userGender;
+
+  /**
+   * 学院
+   */
+  @Column(name = "USER_COLLEGE", columnDefinition = "varchar(50)  comment '学院'")
+  private String userCollege;
+
+  /**
+   * 专业
+   */
+  @Column(name = "USER_SUBJECT", columnDefinition = "varchar(50)  comment '专业'")
+  private String userSubject;
+
+  /**
+   * 班级
+   */
+  @Column(name = "USER_CLASS", columnDefinition = "varchar(50)  comment '班级'")
+  private String userClass;
+
+  /**
+   * 学号
+   */
+  @Column(name = "USER_NUMBER", columnDefinition = "varchar(50)  comment '学号'")
+  private String userNumber;
+
+  /**
+   * 状态
+   */
+  @Column(name = "USER_STATUS", columnDefinition = "varchar(5)  comment '状态'")
+  private String userStatus;
+
+  /**
+   * 审核状态
+   */
+  @Column(name = "USER_CHECK_STATUS", columnDefinition = "varchar(5)  comment '审核状态'")
+  private String userCheckStatus;
+
+  /**
+   * 创建时间
+   */
+/*  @Column(name = "USER_CREATE_TIME", columnDefinition = "datetime  comment '创建时间'")
+  private Data userDate;*/
+
+  /**
+   * 操作时间
+   */
+/*  @Column(name = "USER_LAST_UPDATE_TIME", columnDefinition = "datetime  comment '操作时间'")
+  private Data userLastUpdateTime;*/
+
+
 }
 
